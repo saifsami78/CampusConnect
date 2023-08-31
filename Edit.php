@@ -7,8 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
   <body>
-    
+
       <?php include 'navbar.php'; ?>
+
+      <br>
 
 
      <div class="container">
@@ -43,9 +45,10 @@
             </form>
 
             <br>
-            <p> Change your interested club : </p>
+            
             <form action="supplimentarylogin.php" method = "post">
                 <div class="mb-3">
+                    <p> Change your interested club : </p>
                     <select class="form-select" name="club_interest" Default aria-label="Default select example">
                         <option selected> </option>
                         <option value="1">Drama and Cine Club</option>
@@ -54,6 +57,7 @@
                         <option value="4">Art and Photography Club </option>
                         <option value="5"> I am not interested in any club </option>
                     </select>
+                    <br>
                     <button type="submit" class="btn btn-dark"> Submit  </button>
                 </div>
                 

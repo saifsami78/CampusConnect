@@ -9,11 +9,21 @@
   <body>
       <?php include 'navbar.php'; 
       ?>
+
+      <h2><b><center> Posts </center></b></h2>                 
+      
+      
+
      
+      </div>
+      <div class="container">
+        <a href="Report.php" class="btn btn-dark">Report Here if you find any post inappropriate</a>
+
       </div>
 
       <div>
-        <h2><b>Posts</b></h2>
+        
+          <div class="container">
           <?php
 
 
@@ -25,7 +35,7 @@
               die("Connection failed: " . mysqli_connect_error());
             }
 
-            $sql = "SELECT username, post_content FROM posts";
+            $sql = "SELECT username, post_content,post_id FROM posts";
             $result = mysqli_query($conn, $sql);
 
             $rows = [];
@@ -33,15 +43,25 @@
               $rows[] = $row;
             }
 
-            $num = count($rows) - 1;
-            for ($i = $num; $i >= 0; $i--) {
-              echo "<h4>" . $rows[$i]['username'] . "</h4>";
-              echo $rows[$i]['post_content'];
-            }
+            
+              
+              $num = count($rows) - 1;
+              for ($i = $num; $i >= 0; $i--) {
+                echo "<br> <br>";
+                echo "<h4>" . $rows[$i]['username'] . "</h4>";
+                echo "<p>" . " Post ID : " .  $rows[$i]['post_id'] . "</p>";
+                echo $rows[$i]['post_content'];
+              }
+            
+           
+
+            
 
 
             mysqli_close($conn);
           ?>
+
+          </div>
       </div>
       
 
