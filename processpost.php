@@ -17,11 +17,16 @@
 
         if ($result) {
         echo "The post was successfully inserted into the database.";
+            mysqli_close($conn);
+            header("Location:User Profile.php");
+
         } else {
-        echo "The post could not be inserted into the database.";
+            echo "The post could not be inserted into the database.";
+            mysqli_close($conn);
+            header("Location:User Profile.php");
         }
 
-        mysqli_close($conn);
+        
 
     }
 ?>
