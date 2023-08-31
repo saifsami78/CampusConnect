@@ -72,7 +72,7 @@
     </div>
 
     <div class="container">
-        <form>
+        <form action = "processpost.php" method = "post">
             <div class="form-group">
                 <label for="Post"> Want to Post on Anything ? </label>
                 <textarea class="form-control" id="announcement" name="announcement" rows="4" cols="6"></textarea>

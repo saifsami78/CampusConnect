@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $connection = new mysqli("localhost", "root", "", "connect");
 
     if ($connection->connect_error) {
@@ -7,6 +8,7 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $username = $_POST['username'];
+        $_SESSION["username"] = $username;
         $password = $_POST['password'];
 
         $sql = "SELECT * FROM signup WHERE username = '$username' AND password = '$password'";

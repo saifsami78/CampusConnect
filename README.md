@@ -1,2 +1,2 @@
 # CampusConnect
- This is project is part of my academic work 
+ This project is part of my academic course CSE482 
