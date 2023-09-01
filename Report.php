@@ -9,10 +9,11 @@
   <body>
 
       <?php include 'navbar.php'; ?>
+      <br>
 
     <h3><center> Report Page </cente></h3>
      <div class="container">
-        <p>If you find any post as inappropriate then you can report </p>
+        <p>If you find any post inappropriate then you can report here </p>
         
         <form action="Report.php" method="post">
                 <div class="mb-3">

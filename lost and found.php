@@ -16,19 +16,19 @@
       <br>
      
       <div class="container">
-        <form action = "lost and found.php" method = "post">
+        <form action = "ActivateLost.php" method = "post">
 
             <div class="form-group">
                 <h3>Did you find anything ? Post here !</h3>
 
                 <p>Please write the product name here which you found : </p>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Write Product Name only" required>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name= "product_name" placeholder="Write Product Name only" required>
                 <br>
                 <textarea class="form-control" id="announcement" name="announcement" rows="4" cols="6" placeholder="Write in Details everything!" required></textarea>
                 <br>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Method to contract you " required>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="contract_method" placeholder="Method to contract you " required>
                 <br>
-                <input type="file" class="form-control-file" id="photo" name="photo" required>
+                <input type="file" class="form-control-file" id="photo" name="photo" >
             </div>
             <br>
             <button type="submit" class="btn btn-dark">Post it!</button>
@@ -46,3 +46,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
 </html>
+
+
+
