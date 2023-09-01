@@ -16,42 +16,32 @@
       <br>
      
       <div class="container">
-        <form action = "processpost.php" method = "post">
+        <form action = "lost and found.php" method = "post">
+
             <div class="form-group">
-                <label for="Post"> Want to Post on Anything ? </label>
-                <textarea class="form-control" id="announcement" name="announcement" rows="4" cols="6" required></textarea>
+                <h3>Did you find anything ? Post here !</h3>
+
+                <p>Please write the product name here which you found : </p>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Write Product Name only" required>
                 <br>
-                <input type="file" class="form-control-file" id="photo" name="photo">
+                <textarea class="form-control" id="announcement" name="announcement" rows="4" cols="6" placeholder="Write in Details everything!" required></textarea>
+                <br>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Method to contract you " required>
+                <br>
+                <input type="file" class="form-control-file" id="photo" name="photo" required>
             </div>
             <br>
             <button type="submit" class="btn btn-dark">Post it!</button>
         </form>
     </div>
 
-
+    <br>
     <div class="container">
-        <hr>
-        <hr>
+        <a href="People found.php" class="btn btn-dark"> Did you lost something? See if anyone has found it </a>
     </div>
 
-      <div class="container">
-        <div class="row">
-       
-            <div>
-              <h3><center>User Information </center></h3>
-              <div>
-                <p> Name :  $Name </p>
-                <p> Username :  $Username</p>
-                <p> Email Id : $Email_Id</p>
-                <p> Club Interested : $interested_club</p>
-                <p>Which categories of post you don't want to see </p>
-               
-            </div>
-            <div class="col-4">
-              <a href="Edit.php" class="btn btn-dark"> Edit My Information </a>
-            </div>
-        </div>
-      </div>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>

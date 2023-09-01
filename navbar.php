@@ -16,7 +16,7 @@
                 <a class="nav-link" href="#">Faculty Info</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Lost and Found</a>
+                <a class="nav-link" href="lost and found.php">Lost and Found</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Club Info.php">Club Info </a>
