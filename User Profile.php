@@ -48,6 +48,10 @@
                
             </div>
             <div class="col-4">
+              <a href="facultyinfo.php" class="btn btn-dark"> If you are a faculty member, please click here !  </a>
+            </div>
+            <br>
+            <div class="col-4">
               <a href="Edit.php" class="btn btn-dark"> Edit My Information </a>
             </div>
         </div>

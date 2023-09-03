@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['username'])){
+    echo "<script>top.window.location = './index.php'</script>";
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,21 +19,21 @@
   <body>
       <?php include 'navbar.php'; 
       ?>
-
-      <h2><b><center> Posts </center></b></h2>                 
+      <br>
+      <h2><b><center> Posts </center></b></h2><hr><br>                 
       
       
 
      
       </div>
-      <div class="container">
+      <div class="container text-center">
         <a href="Report.php" class="btn btn-dark">Report Here if you find any post inappropriate</a>
 
       </div>
 
       <div>
         
-          <div class="container">
+          <div class="container text-center ">
           <?php
 
 
@@ -47,10 +57,21 @@
               
               $num = count($rows) - 1;
               for ($i = $num; $i >= 0; $i--) {
+
+
                 echo "<br> <br>";
-                echo "<h4>" . $rows[$i]['username'] . "</h4>";
-                echo "<p>" . " Post ID : " .  $rows[$i]['post_id'] . "</p>";
-                echo $rows[$i]['post_content'];
+
+                echo "<div class='card' style='box-shadow: 2px 2px 10px grey'>
+                <div class='card-body'>
+                  <h5 class='card-title'>" . $rows[$i]['username'] . "</h5><hr>
+                  
+                  <p class='card-text'>". $rows[$i]['post_content'] ."</p>
+                  <a href='#' class='card-link'>" . " Post ID : " .  $rows[$i]['post_id'] . "</a>
+                </div>
+              </div>";
+                // echo "<h4>" . $rows[$i]['username'] . "</h4>";
+                // echo "<p>" . " Post ID : " .  $rows[$i]['post_id'] . "</p>";
+                // echo $rows[$i]['post_content'];
               }
             
            
