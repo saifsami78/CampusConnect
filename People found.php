@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['username'])){
+    echo "<script>top.window.location = './index.php'</script>";
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,8 +23,12 @@
       <div class="cotainer" >
        
         <h3> <center> All The Stuff People Has got </center></h3>
-        <p>All the stuff people has got is listed below .If what you lost is listed below please collect the product id and click on More details and then give the product id.You will get more details and way to contract </p>
+        <p><center><u>All the items that people have found are listed below. If what you've lost is included in the list, please note down the product ID and click on 'More Details' to access additional information and find out how to contact them </u></center></p>
+     
       </div>
+
+
+        <br>
       
     
         <div class="container">
@@ -35,12 +49,12 @@
 
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
-                echo '<p><strong> Product name: ' . $row['product_name'] . '</p></strong>';
-                echo '<p><strong> Post ID: ' . $row['post_id'] . '</strong></p>';
+                echo '<p> Product name: ' . $row['product_name'] . '</p>';
+                echo '<p> Post ID: ' . $row['post_id'] . '</p>';
             }
         } 
         else {
-            echo '<p>No results found.</p>';
+            echo '<p> No results found.</p>';
         }
 
 
@@ -63,5 +77,7 @@
   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <br>
+    <?php include 'footer.html'; ?>
   </body>
 </html>

@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['username'])){
+    echo "<script>top.window.location = './index.php'</script>";
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,6 +22,7 @@
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  
   </body>
   <br>
 
@@ -68,7 +79,11 @@
         echo '<p><center>Contract Method: ' . $row['contract_method'] . '</center></p>';
     }
 
+
     
     mysqli_close($conn);
 
 ?>
+
+
+<?php include 'footer.html'; ?>
