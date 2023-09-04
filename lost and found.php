@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['username'])){
+    echo "<script>top.window.location = './index.php'</script>";
+}
+
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>

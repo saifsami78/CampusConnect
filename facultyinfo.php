@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['username'])){
+    echo "<script>top.window.location = './index.php'</script>";
+}
+
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -43,8 +54,8 @@
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label"> Office Hour   </label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-                </div>
+                    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                  </div>
 
 
                 <div class="mb-3">
