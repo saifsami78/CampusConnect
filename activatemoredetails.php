@@ -13,7 +13,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
+  <br>
+
 </html>
+
 
 <?php
 
@@ -48,9 +51,21 @@
         $row = mysqli_fetch_assoc($result);
 
         
-        echo '<h2>Product Name: ' . $row['product_name'] . '</h2>';
-        echo '<p>Product Details: ' . $row['announcement'] . '</p>';
-        echo '<p>Contract Method: ' . $row['contract_method'] . '</p>';
+        echo '<h2><center>Product Name: ' . $row['product_name'] . '</center></h2>';
+
+        echo '<br>';
+
+
+
+   
+        echo '<div style="display: flex; justify-content: center; align-items: center; height: 400px;">';
+        echo '<img src="abc.jfif" width="200" height="400">';
+        echo '</div>';
+        
+        
+
+        echo '<p><center>Product Details: ' . $row['announcement'] . '</center></p>';
+        echo '<p><center>Contract Method: ' . $row['contract_method'] . '</center></p>';
     }
 
     

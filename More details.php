@@ -10,9 +10,9 @@
      <?php include 'navbar.php'; ?>
         
      <div class="container">
-        <h3>Enter the Product ID: </h3>
+        <h3><center>Enter the Product ID: </center> </h3>
         <form action="activatemoredetails.php" method = "post">
-            <input type="text" class="form-control" id="exampleFormControlInput1" name="post_id"required>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="post_id"required >
             <br>
             <button type="submit" class="btn btn-dark">Find Details ! </button>
         </form>
