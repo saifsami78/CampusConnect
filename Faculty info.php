@@ -9,6 +9,35 @@
   <body>
 
       <?php include 'navbar.php'; ?>
+
+      <div class="container">
+        <div class="row">
+       
+            <div>
+              <div>
+                <br>
+                <h3><center> Full Name :  $Name </center></h3>
+                <?php
+                 echo '<div style="display: flex; justify-content: center; align-items: center; height: 400px;">';
+                 echo '<img src="faculty.jfif" width="220" height="300">';
+                 echo '</div>';
+                 ?>
+                 <br>
+                 <br>
+                <textarea class="form-control" aria-label="With textarea">This is Mr. Haq! I love teaching.Mail me if you have similar research interest </textarea>
+                <br>
+                <p> Faculty ID :  $Faculty ID</p>
+                <p> Office Hour : ST : 2:36
+                RA : 9: 40 - 4: 20 </p>
+                <p> Research Interest : Machine Learning </p>
+                <p> Email Id : firstname@northsouth.edu </p>
+                <p> Phone Number  : 0187464587 </p>
+                
+               
+            </div>
+          
+        </div>
+      </div>
       
       
       

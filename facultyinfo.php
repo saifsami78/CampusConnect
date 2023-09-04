@@ -43,6 +43,10 @@ if(!isset($_SESSION['username'])){
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
                 </div>
                 <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Department Name </label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                </div>
+                <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Faculty ID </label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
                 </div>

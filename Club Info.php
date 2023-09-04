@@ -20,71 +20,78 @@ if(!isset($_SESSION['username'])){
     <?php include 'navbar.php'; ?>
 
 
+    <div class="container">
+
+        <br>
+            <br>
+            <h1 > Art & Photography Club </h1>
+            <p>President - Ashab Abid Shad
+                Vice President - Shariba Mashrura
+                General Secretary -  Tanjil Mahmud
+                Treasurer - Navila Kabir
+            </p>
+            <br>
+            <h5>Faculty Advisor</h5>
+            <p>Mr. Shahriar Iqbal Raj
+
+            shahriar.raj@northsouth.edu
+            </p>
+            <br>
+            <h1 > Athletics Club   </h1>
+            <p>President - Md. Rashiq Mahmud Anik
+                Vice President(Game & Development) - Md. Sayem Ahmed 
+                Vice President (Marketing)- Md. Emran Howlder
+                General Secretary - Md. Mohin Uddin Sunmoon
+                Joint Secretary- Anwarul Islam Munna
+                Joint Secretary- Samsia Matin                                   
+                Joint Secretary- Humayra Akhter Oyshi
+            </p>
+            <br>
+            <h5> Faculty Advisor	</h5>
+            <p>
+                Md. Mehedi Hasan
+
+                mehedi.hasan11@northsouth.edu
+            </p>
+
+            <br>
+            <h1 > Cine and Drama Club, NSU   </h1>
+            <p>
+                President - Debangshu Pallab
+                Vice President - Md. Muanna Zilan
+                General Secretary - Devodyuti Aich
+                Joint Secretary- Humayun Ahmed
+                Treasurer - Amani Islam 
+            </p>
+            <br>
+            <h5> Faculty Advisor	</h5>
+            <p>
+                Ms. Parisa Shakur
+
+                parisa.shakur@northsouth.edu
+            </p>
+
+            <br>
+            <h1 >  Communications Club  </h1>
+            <p>
+                President - Ali Sadman Sakib
+                Vice President - Nusaiba Mirza
+                General Secretary -
+                Treasurer - Labib
+            </p>
+            <br>
+            <h5> Faculty Advisor	</h5>
+            <p>
+                Musharrat Hossain 
+
+                musharrat.hossain@northsouth.edu
+            </p>      
+
+    </div>
+
+
     <div>
-        <br>
-        <br>
-        <h1 > Art & Photography Club </h1>
-        <p>President - Ashab Abid Shad
-            Vice President - Shariba Mashrura
-            General Secretary -  Tanjil Mahmud
-            Treasurer - Navila Kabir
-        </p>
-        <br>
-        <h5>Faculty Advisor</h5>
-        <p>Mr. Shahriar Iqbal Raj
-
-        shahriar.raj@northsouth.edu
-        </p>
-        <br>
-        <h1 > Athletics Club   </h1>
-        <p>President - Md. Rashiq Mahmud Anik
-            Vice President(Game & Development) - Md. Sayem Ahmed 
-            Vice President (Marketing)- Md. Emran Howlder
-            General Secretary - Md. Mohin Uddin Sunmoon
-            Joint Secretary- Anwarul Islam Munna
-            Joint Secretary- Samsia Matin                                   
-            Joint Secretary- Humayra Akhter Oyshi
-        </p>
-        <br>
-        <h5> Faculty Advisor	</h5>
-        <p>
-            Md. Mehedi Hasan
-
-            mehedi.hasan11@northsouth.edu
-        </p>
-
-        <br>
-        <h1 > Cine and Drama Club, NSU   </h1>
-        <p>
-            President - Debangshu Pallab
-            Vice President - Md. Muanna Zilan
-            General Secretary - Devodyuti Aich
-            Joint Secretary- Humayun Ahmed
-            Treasurer - Amani Islam 
-        </p>
-        <br>
-        <h5> Faculty Advisor	</h5>
-        <p>
-            Ms. Parisa Shakur
-
-            parisa.shakur@northsouth.edu
-        </p>
-
-        <br>
-        <h1 >  Communications Club  </h1>
-        <p>
-            President - Ali Sadman Sakib
-            Vice President - Nusaiba Mirza
-            General Secretary -
-            Treasurer - Labib
-        </p>
-        <br>
-        <h5> Faculty Advisor	</h5>
-        <p>
-            Musharrat Hossain 
-
-            musharrat.hossain@northsouth.edu
-        </p>      
+        
 
     </div>
 
