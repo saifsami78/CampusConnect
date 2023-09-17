@@ -8,6 +8,8 @@ if(!isset($_SESSION['username'])){
 
 ?>
 
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -26,34 +28,58 @@ if(!isset($_SESSION['username'])){
         <br>
         <br>
         <div class="container">
+                <style>
+                  h3{
+                    color : mediumseagreen;
+                  }
+                </style>
                 <h3><center>All the names of faculty members are listed below. Click on the name to view their details</center></h3>
-
+                
                 <br>
-                <a href="faculty info.php">Mr. Khan </a>
-                <p>Department : ECE </p>
-                <p> Faculty Initial : HJB </p>
-
-                <br>
-                <br>
-
-                <a href="faculty info.php">Mr. Kabir </a>
-                <p>Department : ECE </p>
-                <p> Faculty Initial : HJB </p>
+                <?php
+          $conn = mysqli_connect('localhost', 'root', '', 'connect');
 
 
-                <br>
-                <br>
+          if ($conn === false) {
+              die('Connection failed: ' . mysqli_connect_error());
+          }
 
-                <a href="faculty info.php">Mr. Rahman  </a>
-                <p>Department : ECE </p>
-                <p> Faculty Initial : HRGY </p>
+          $sql = "SELECT * FROM facultyinfo";
+          $query_result = mysqli_query($conn, $sql);
 
-                <br>
-                <br>
 
-                <a href="faculty info.php">Mr. Khan </a>
-                <p>Department : BBA </p>
-                <p> Faculty Initial : HKY </p>
+          if ($query_result === false) {
+            die('Query failed: ' . mysqli_error($conn));
+          }
+
+          
+          if (mysqli_num_rows($query_result) === 0) {
+              echo '<p>No results found.</p>';
+          } else {
+            $rows = [];
+            while ($row = mysqli_fetch_assoc($query_result)) {
+              $rows[] = $row;
+            }
+
+            $num = count($rows) - 1;
+            for ($i = $num; $i >= 0; $i--) {
+
+
+              echo "<br>";
+
+              echo "<div class='card' style='box-shadow: 2px 2px 10px grey'>
+              <div class='card-body'>
+                <p class='card-text'>". $rows[$i]['fullname'] ."</p>
+                <p class='card-text'>". $rows[$i]['Department'] ."</p>
+                </div>
+              </div>";
+              echo "<hr>";
+              
+            }
+          }
+            
+          mysqli_close($conn);
+        ?>
 
         </div>
       

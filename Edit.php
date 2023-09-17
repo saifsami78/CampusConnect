@@ -1,12 +1,41 @@
 <?php
-
 session_start();
 
-if(!isset($_SESSION['username'])){
+if (!isset($_SESSION['username'])) {
     echo "<script>top.window.location = './index.php'</script>";
+    exit; 
 }
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $username = $_SESSION['username'];
+
+    $conn = mysqli_connect('localhost', 'root', '', 'connect');
+
+    if ($conn === false) {
+        die('Connection failed: ' . mysqli_connect_error());
+    }
+
+    $username = mysqli_real_escape_string($conn, $_SESSION['username']);
+    $sql = "UPDATE signup SET email = '$email', password = '$password', firstname = '$firstname', lastname = '$lastname' where username = '$username'";
+
+    if (mysqli_query($conn, $sql)) {
+        mysqli_close($conn);
+        header('Location: User Profile.php');
+        exit; // Exit to prevent further execution
+    } else {
+        echo "Error updating record: " . mysqli_error($conn);
+    }
+
+    mysqli_close($conn);
+}
 ?>
+
+
 
 <!doctype html>
 <html lang="en">
@@ -28,29 +57,29 @@ if(!isset($_SESSION['username'])){
         }
       </style>
 
-     <h3><center> If you want to change one or more information of your profile just write down the new attribute of that and click submit   </center></h3>
+     <h3><center> If you want to change information just fil the form and click submit   </center></h3>
      
      <br>
      <br>
      <div class="container">
-            <form action="supplimentarylogin.php" method = "post">
+            <form action="Edit.php" method = "POST">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="username">Change your First Name</label>
-                    <input type="username" name = "firstname" class="form-control" id="exampleFormControlInput1" placeholder="" >
+                    <input type="username" name = "firstname" class="form-control" id="exampleFormControlInput1" placeholder="" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="lastname">Change Last Name</label>
-                    <input type="username" name = "lastname" class="form-control" id="exampleFormControlInput1" placeholder="" >
+                    <input type="username" name = "lastname" class="form-control" id="exampleFormControlInput1" placeholder="" required>
                 </div>
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="username">Change your Email</label>
-                    <input type="username" name = "email" class="form-control" id="exampleFormControlInput1" placeholder="" >
+                    <input type="email" name = "email" class="form-control" id="exampleFormControlInput1" placeholder="" required>
                 </div>
 
                 <div class="mb-2">
                     <label for="exampleFormControlInput1" class="username">Write your New Password</label>
-                    <input type="username" name = "password" class="form-control" id="exampleFormControlInput1" placeholder="" >
+                    <input type="password" name = "password" class="form-control" id="exampleFormControlInput1" placeholder="" required >
                 </div>
 
                 
@@ -62,8 +91,6 @@ if(!isset($_SESSION['username'])){
 
             
             <br>
-
-            <h3>Eventually it will get updated! </h3>
             <br>
             <br>
      </div>
@@ -75,3 +102,38 @@ if(!isset($_SESSION['username'])){
     <?php include 'footer.html'; ?>
     </body>
 </html>
+
+
+<?php
+
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $username = $_SESSION['username'];
+
+
+    $conn = mysqli_connect('localhost', 'root', '', 'connect');
+
+    if ($conn === false) {
+        die('Connection failed: ' . mysqli_connect_error());
+    }
+
+    $username = mysqli_real_escape_string($conn, $_SESSION['username']);
+    $sql = "UPDATE signup SET email = '$email', password = '$password', firstname = '$firstname', lastname = '$lastname' where username = '$username'";
+
+    if (mysqli_query($conn, $sql)) {
+        
+        header('Location: User Profile.php');
+        mysqli_close($conn);
+        exit; 
+    } else {
+        echo "Error updating record: " . mysqli_error($conn);
+    }
+    mysqli_close($conn);
+    
+
+?>
+
+

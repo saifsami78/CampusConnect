@@ -1,9 +1,15 @@
 <?php
 
-    $username = $_SESSION['username'];
-    $product_name = $_POST['product_name'];
-    $announcement = $_POST['announcement'];
-    $contract_method = $_POST['contract_method'];
+    $photo = $_SESSION['photo'];
+    $tellyourself = $_POST['tellyourself'];
+    $research = $_POST['rsinterest'];
+    $office_hour = $_POST['officehour'];
+    $fullname = $_POST['fullname'];
+    $Department = $_POST['Departmentname'];
+    $facultyID = $_POST['facultyID'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+
 
     $conn = mysqli_connect('localhost', 'root', '', 'connect');
 
@@ -12,11 +18,11 @@
     }
 
     
-    $sql = "INSERT INTO lost_and_found (username, product_name, announcement, contract_method) VALUES ('$username', '$product_name', '$announcement', '$contract_method')";
+    $sql = "INSERT INTO facultyinfo (Tellyourself, photo_link, research, Office_Hour, fullname, Department, Faculty_Id, Email, Phone) VALUES ('$tellyourself', '$photo', '$research', '$office_hour', '$fullname', '$Department', '$facultyID', '$email' , '$phone')";
     mysqli_query($conn, $sql);
     mysqli_close($conn);
-    echo "Post added !" . "<br>";
+    echo "updated!";
     
-    header('Location: lost and found.php');
+    header('Location: User Profile.php');
 
 ?>
