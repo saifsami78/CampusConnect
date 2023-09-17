@@ -34,13 +34,17 @@ if(!isset($_SESSION['username'])){
                 <label for="exampleFormControlTextarea1" class="form-label">Write down why do you think this post is inappropriate? </label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-dark">Submit to Report </button>
+                <br>
+                <button type="submit" class="btn btn-success">Submit to Report </button>
         </form>
 
      </div>
   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <br>
+    <br>
+    <br>
     <br>
     <?php include 'footer.html'; ?>
   </body>

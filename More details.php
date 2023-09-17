@@ -25,7 +25,7 @@ if(!isset($_SESSION['username'])){
         <form action="activatemoredetails.php" method = "post">
             <input type="text" class="form-control" id="exampleFormControlInput1" name="post_id"required >
             <br>
-            <button type="submit" class="btn btn-dark">Find Details ! </button>
+            <button type="submit" class="btn btn-success">Find Details ! </button>
         </form>
      </div>
 

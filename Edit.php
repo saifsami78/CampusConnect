@@ -22,56 +22,50 @@ if(!isset($_SESSION['username'])){
 
       <br>
 
+      <style>
+        h3{
+            color : mediumseagreen;
+        }
+      </style>
 
+     <h3><center> If you want to change one or more information of your profile just write down the new attribute of that and click submit   </center></h3>
+     
+     <br>
+     <br>
      <div class="container">
             <form action="supplimentarylogin.php" method = "post">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="username">Change your First Name</label>
-                    <input type="username" name = "firstname" class="form-control" id="exampleFormControlInput1" placeholder="Your New First Name" >
+                    <input type="username" name = "firstname" class="form-control" id="exampleFormControlInput1" placeholder="" >
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="lastname">Change Last Name</label>
-                    <input type="username" name = "lastname" class="form-control" id="exampleFormControlInput1" placeholder="Your New Last Name" >
+                    <input type="username" name = "lastname" class="form-control" id="exampleFormControlInput1" placeholder="" >
                 </div>
-                <button type="submit" class="btn btn-dark"> Submit  </button>
-            </form>
-            <br>
 
-            <form action="supplimentarylogin.php" method = "post">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="username">Change your Email</label>
-                    <input type="username" name = "email" class="form-control" id="exampleFormControlInput1" placeholder="Your New Email" >
+                    <input type="username" name = "email" class="form-control" id="exampleFormControlInput1" placeholder="" >
                 </div>
-                <button type="submit" class="btn btn-dark"> Submit  </button>
-            </form>
 
-            <br>
-            <form action="supplimentarylogin.php" method = "post">
                 <div class="mb-2">
                     <label for="exampleFormControlInput1" class="username">Write your New Password</label>
-                    <input type="username" name = "password" class="form-control" id="exampleFormControlInput1" placeholder="New password" >
+                    <input type="username" name = "password" class="form-control" id="exampleFormControlInput1" placeholder="" >
                 </div>
-                <button type="submit" class="btn btn-dark"> Submit  </button>
-            </form>
 
-            <br>
-            
-            <form action="supplimentarylogin.php" method = "post">
-                <div class="mb-3">
-                    <p> Change your interested club : </p>
-                    <select class="form-select" name="club_interest" Default aria-label="Default select example">
-                        <option selected> </option>
-                        <option value="1">Drama and Cine Club</option>
-                        <option value="2">Communications Club</option>
-                        <option value="3">Athletics Club</option>
-                        <option value="4">Art and Photography Club </option>
-                        <option value="5"> I am not interested in any club </option>
-                    </select>
-                    <br>
-                    <button type="submit" class="btn btn-dark"> Submit  </button>
-                </div>
+                
+                
+
+                <button type="submit" class="btn btn-success"> Submit  </button>
                 
             </form>
+
+            
+            <br>
+
+            <h3>Eventually it will get updated! </h3>
+            <br>
+            <br>
      </div>
    
   

@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['username'])){
+    echo "<script>top.window.location = './index.php'</script>";
+}
+
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,6 +38,15 @@
         <p>Ahmed Fahim</p>
         <p>Md. Saif Uddin Sarker</p>
       </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <?php include 'footer.html'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>

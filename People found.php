@@ -65,7 +65,7 @@ if(!isset($_SESSION['username'])){
         
 
         <div class="container">
-            <a href="More details.php" class="btn btn-dark"> More Details</a>
+            <a href="More details.php" class="btn btn-success"> More Details</a>
       
         </div>
 

@@ -23,6 +23,11 @@
 
                 <br>
                 <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
                 <img src="logo.png" alt="A local image">
             </div>
             <div class="col-2">
@@ -46,7 +51,7 @@
                       </div>
                       <br>
                       <br>
-                      <button type="submit" class="btn btn-dark"> Log in  </button>
+                      <button type="submit" class="btn btn-success"> Log in  </button>
                 </form>
                 <br>
                 <br>
@@ -57,9 +62,11 @@
 
       <br>
       <br>
-      <div id="message1">
-        <p>An website built as part of CSE 482L Course </p>
-      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+    <?php include 'footer.html'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>

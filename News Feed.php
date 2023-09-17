@@ -15,19 +15,28 @@ if(!isset($_SESSION['username'])){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Campus Connect </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+      #ok{
+        color: mediumseagreen;
+      };
+      #footer_text{
+        color: mediumseagreen;
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
-      <?php include 'navbar.php'; 
+      <?php include 'navbar.php';
       ?>
       <br>
-      <h2><b><center> Posts </center></b></h2><hr><br>                 
+      <h2 id="ok"><b><center> Posts </center></b></h2><hr><br>                 
       
       
 
      
       </div>
       <div class="container text-center">
-        <a href="Report.php" class="btn btn-dark">Report Here if you find any post inappropriate</a>
+        <a href="Report.php" class="btn btn-success">Report Here if you find any post inappropriate</a>
 
       </div>
 
@@ -58,17 +67,82 @@ if(!isset($_SESSION['username'])){
               $num = count($rows) - 1;
               for ($i = $num; $i >= 0; $i--) {
 
+                echo'<div class="row">';
 
-                echo "<br> <br>";
+                  echo'<div class="col-4">';
 
-                echo "<div class='card' style='box-shadow: 2px 2px 10px grey'>
-                <div class='card-body'>
-                  <h5 class='card-title'>" . $rows[$i]['username'] . "</h5><hr>
-                  
-                  <p class='card-text'>". $rows[$i]['post_content'] ."</p>
-                  <a href='#' class='card-link'>" . " Post ID : " .  $rows[$i]['post_id'] . "</a>
-                </div>
-              </div>";
+                      echo "<br> <br>";
+
+                      echo "<div class='card' style='box-shadow: 2px 2px 10px grey'>
+                      <div class='card-body'>
+                        <h5 class='card-title' id='ok'>" . $rows[$i]['username'] . "</h5><hr>
+                        
+                        <p class='card-text'>". $rows[$i]['post_content'] ."</p>
+      
+                      </div>
+                      
+                      <div class='card-footer'>
+                        <a href='#' class='card-link' id='ok'>" . " Post ID : " .  $rows[$i]['post_id'] . "</a>
+                      </div>
+      
+                     </div>";
+                  echo'</div>';
+
+                  $i--;
+                  if($i < 0){
+                    break;
+                  };
+
+                  echo'<div class="col-4">';
+
+                      echo "<br> <br>";
+
+                      echo "<div class='card' style='box-shadow: 2px 2px 10px grey'>
+                      <div class='card-body'>
+                        <h5 class='card-title' id='ok'>" . $rows[$i]['username'] . "</h5><hr>
+                        
+                        <p class='card-text'>". $rows[$i]['post_content'] ."</p>
+      
+                      </div>
+                      
+                      <div class='card-footer'>
+                        <a href='#' class='card-link' id='ok'>" . " Post ID : " .  $rows[$i]['post_id'] . "</a>
+                        <a href='Report.php' class='card-link' id='ok'> Report </a>
+                        <a href='#' class='card-link' id='ok'>" . " Post ID : " .  $rows[$i]['post_id'] . "</a>;
+                        
+                      </div>
+      
+                     </div>";
+                  echo'</div>';
+
+                  $i--;
+                  if($i < 0){
+                    break;
+                  }
+
+                  echo'<div class="col-4">';
+
+                      echo "<br> <br>";
+
+                      echo "<div class='card' style='box-shadow: 2px 2px 10px grey'>
+                      <div class='card-body'>
+                        <h5 class='card-title' id='ok'>" . $rows[$i]['username'] . "</h5><hr>
+                        
+                        <p class='card-text'>". $rows[$i]['post_content'] ."</p>
+      
+                      </div>
+                      
+                      <div class='card-footer'>
+                        <a href='#' class='card-link' id='ok'>" . " Post ID : " .  $rows[$i]['post_id'] . "</a>
+                      </div>
+      
+                     </div>";
+                  echo'</div>';
+                
+                echo'</div>';
+
+
+                
                 // echo "<h4>" . $rows[$i]['username'] . "</h4>";
                 // echo "<p>" . " Post ID : " .  $rows[$i]['post_id'] . "</p>";
                 // echo $rows[$i]['post_content'];

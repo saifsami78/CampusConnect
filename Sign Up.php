@@ -11,6 +11,12 @@
       <div class="container">
             <div class="row">
                 <div class="col-4">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                     <img src="logo.png" alt="what">
                 </div>
                 <div class="col-2">
@@ -54,7 +60,7 @@
                             <option value="5"> I am not interested in any club </option>
                         </select>
                         <br>
-                        <button type="submit" class="btn btn-outline-dark"> Submit </button>
+                        <button type="submit" class="btn btn-outline-success"> Submit </button>
                     </form>
                     
 

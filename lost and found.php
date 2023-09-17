@@ -42,13 +42,13 @@ if(!isset($_SESSION['username'])){
                 <input type="file" class="form-control-file" id="photo" name="photo" >
             </div>
             <br>
-            <button type="submit" class="btn btn-dark">Post it!</button>
+            <button type="submit" class="btn btn-success">Post it!</button>
         </form>
     </div>
 
     <br>
     <div class="container">
-        <a href="People found.php" class="btn btn-dark"> Did you lost something? See if anyone has found it </a>
+        <a href="People found.php" class="btn btn-success"> Did you lost something? See if anyone has found it </a>
     </div>
 
 

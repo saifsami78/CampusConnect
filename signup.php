@@ -18,7 +18,6 @@
 
     if($connection -> connect_error){
         die('Connection Failed: '.$connection->connect_error);
-        header("Location: signup.php");
     }
     else{
         $statement = $connection -> prepare("insert into signup (username, email, password, firstname, lastname, club_interest) value (?,?,?,?,?,?)");
