@@ -38,13 +38,37 @@ if(!isset($_SESSION['username'])){
       
       </div>
 
-
         <br>
       
     
         <div class="container">
-        <?php
+          <style>
+            .product {
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin-bottom: 20px;
+                background-color: #f9f9f9;
+            }
 
+            .product h2 {
+                font-size: 18px;
+                margin-top: 0;
+            }
+
+            .product p {
+                font-size: 14px;
+                margin-bottom: 0;
+            }
+
+            .no-results {
+                font-size: 16px;
+                font-weight: bold;
+                color: red;
+            }
+          </style>
+
+        <?php
+        
         
         $conn = mysqli_connect('localhost', 'root', '', 'connect');
 
@@ -59,14 +83,17 @@ if(!isset($_SESSION['username'])){
 
 
         if (mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo '<p> Product name: ' . $row['product_name'] . '</p>';
-                echo '<p> Post ID: ' . $row['post_id'] . '</p>';
-            }
-        } 
-        else {
-            echo '<p> No results found.</p>';
-        }
+          while ($row = mysqli_fetch_assoc($result)) {
+              echo '<div class="product">';
+              echo '<h2>' . $row['product_name'] . '</h2>';
+              echo '<p>Post ID: ' . $row['post_id'] . '</p>';
+              echo '</div>';
+          }
+          } 
+          else {
+              echo '<p class="no-results">No products found.</p>';
+          }
+      
 
 
         mysqli_close($conn);
