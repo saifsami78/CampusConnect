@@ -8,6 +8,9 @@ if(!isset($_SESSION['username'])){
 
 ?>
 
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,74 +21,40 @@ if(!isset($_SESSION['username'])){
   </head>
   <body>
     <?php include 'navbar.php'; ?>
+    <br>
 
 
     <div class="container">
+        <?php
+            $acc = $_SESSION['clubb'];
 
-        <br>
-            <br>
-            <h1 > Art & Photography Club </h1>
-            <p>President - Ashab Abid Shad
-                Vice President - Shariba Mashrura
-                General Secretary -  Tanjil Mahmud
-                Treasurer - Navila Kabir
-            </p>
-            <br>
-            <h5>Faculty Advisor</h5>
-            <p>Mr. Shahriar Iqbal Raj
+            if($acc == 1){
+                include 'cine and drama.html';
+            }
+            else if($acc == 2){
+            
+                include 'communication.html';
+                
+                    
+            }
+            else if($acc == 3){
+                
+                include 'athletics.html';
+                
+            }
+            else if($acc == 4){
+                
+                include 'art & photography.php';
+            }
+            else if($acc == 5){
+                echo "You said You are not interested any club";
+            }
+            
+        ?>
 
-            shahriar.raj@northsouth.edu
-            </p>
-            <br>
-            <h1 > Athletics Club   </h1>
-            <p>President - Md. Rashiq Mahmud Anik
-                Vice President(Game & Development) - Md. Sayem Ahmed 
-                Vice President (Marketing)- Md. Emran Howlder
-                General Secretary - Md. Mohin Uddin Sunmoon
-                Joint Secretary- Anwarul Islam Munna
-                Joint Secretary- Samsia Matin                                   
-                Joint Secretary- Humayra Akhter Oyshi
-            </p>
-            <br>
-            <h5> Faculty Advisor	</h5>
-            <p>
-                Md. Mehedi Hasan
+           
 
-                mehedi.hasan11@northsouth.edu
-            </p>
 
-            <br>
-            <h1 > Cine and Drama Club, NSU   </h1>
-            <p>
-                President - Debangshu Pallab
-                Vice President - Md. Muanna Zilan
-                General Secretary - Devodyuti Aich
-                Joint Secretary- Humayun Ahmed
-                Treasurer - Amani Islam 
-            </p>
-            <br>
-            <h5> Faculty Advisor	</h5>
-            <p>
-                Ms. Parisa Shakur
-
-                parisa.shakur@northsouth.edu
-            </p>
-
-            <br>
-            <h1 >  Communications Club  </h1>
-            <p>
-                President - Ali Sadman Sakib
-                Vice President - Nusaiba Mirza
-                General Secretary -
-                Treasurer - Labib
-            </p>
-            <br>
-            <h5> Faculty Advisor	</h5>
-            <p>
-                Musharrat Hossain 
-
-                musharrat.hossain@northsouth.edu
-            </p>      
 
     </div>
 

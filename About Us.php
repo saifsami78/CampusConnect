@@ -21,6 +21,11 @@ if(!isset($_SESSION['username'])){
 
 
       <?php include 'navbar.php'; ?>
+      <style>
+        h5{
+          color: mediumseagreen;
+        }
+      </style>
 
 
 
@@ -35,8 +40,11 @@ if(!isset($_SESSION['username'])){
 
         <h5>Members : </h5>
         <br>
-        <p>Ahmed Fahim</p>
+        
         <p>Md. Saif Uddin Sarker</p>
+        <p>Ahmed Fahim</p>
+        <p>Mansib Nawaz</p>
+        <p>Tomal</p>
       </div>
 
       <br>

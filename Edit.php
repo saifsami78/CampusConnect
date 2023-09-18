@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         echo "Error updating record: " . mysqli_error($conn);
     }
-
+    $x="gfddgd";
     mysqli_close($conn);
 }
 ?>
@@ -62,6 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
      <br>
      <br>
      <div class="container">
+        
             <form action="Edit.php" method = "POST">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="username">Change your First Name</label>
@@ -99,41 +100,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <br>
-    <?php include 'footer.html'; ?>
+    <?php include 'footer.html'; 
+ 
+    ?>
     </body>
 </html>
-
-
-<?php
-
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-    $username = $_SESSION['username'];
-
-
-    $conn = mysqli_connect('localhost', 'root', '', 'connect');
-
-    if ($conn === false) {
-        die('Connection failed: ' . mysqli_connect_error());
-    }
-
-    $username = mysqli_real_escape_string($conn, $_SESSION['username']);
-    $sql = "UPDATE signup SET email = '$email', password = '$password', firstname = '$firstname', lastname = '$lastname' where username = '$username'";
-
-    if (mysqli_query($conn, $sql)) {
-        
-        header('Location: User Profile.php');
-        mysqli_close($conn);
-        exit; 
-    } else {
-        echo "Error updating record: " . mysqli_error($conn);
-    }
-    mysqli_close($conn);
-    
-
-?>
-
-

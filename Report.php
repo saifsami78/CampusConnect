@@ -1,11 +1,24 @@
 <?php
-
 session_start();
 
-if(!isset($_SESSION['username'])){
+if (!isset($_SESSION['username'])) {
     echo "<script>top.window.location = './index.php'</script>";
 }
 
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $conn = mysqli_connect('localhost', 'root', '', 'connect');
+
+    if ($conn === false) {
+        die('Connection failed: ' . mysqli_connect_error());
+    }
+    $post_id = $_POST['post'];
+    $content = $_POST['content'];
+
+    $sql = "INSERT INTO report (post_id, content) VALUES ('$post_id', '$content')";
+    mysqli_query($conn, $sql);
+    mysqli_close($conn);
+    echo "Reported!";
+}
 ?>
 
 <!doctype html>
@@ -20,22 +33,29 @@ if(!isset($_SESSION['username'])){
 
       <?php include 'navbar.php'; ?>
       <br>
+      <style>
+       #ok{
+        color: mediumseagreen;
+       }
+     </style>
 
-    <h3><center> Report Page </cente></h3>
+    <h3 id="ok"><center> Report Page </cente></h3>
+     
      <div class="container">
         <p>If you find any post inappropriate then you can report here </p>
         
         <form action="Report.php" method="post">
                 <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Post ID</label>
-                <input type="text" name="post_id"class="form-control" id="exampleFormControlInput1" placeholder="Please write down the post ID" required>
-                </div>
-                <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Write down why do you think this post is inappropriate? </label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                <input type="text" name="post"class="form-control" id="exampleFormControlInput1" placeholder="Please write down the post ID" required>
                 </div>
                 <br>
-                <button type="submit" class="btn btn-success">Submit to Report </button>
+                <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Write down why do you think this post is inappropriate? </label>
+                <textarea class="form-control" name="content" id="exampleFormControlTextarea1" rows="5" required></textarea>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-success"> Submit  </button>
         </form>
 
      </div>
@@ -49,3 +69,5 @@ if(!isset($_SESSION['username'])){
     <?php include 'footer.html'; ?>
   </body>
 </html>
+
+

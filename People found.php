@@ -16,15 +16,26 @@ if(!isset($_SESSION['username'])){
     <title>Campus Connect </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
+
+  
   <body>
      <?php include 'navbar.php'; ?>
         <br>
         <br>
       <div class="cotainer" >
-       
-        <h3> <center> All The Stuff People Has got </center></h3>
-        <p><center><u>All the items that people have found are listed below. If what you've lost is included in the list, please note down the product ID and click on 'More Details' to access additional information and find out how to contact them </u></center></p>
-     
+        <style>
+          h3{
+            color: mediumseagreen;
+          }
+          h6{
+            color: mediumseagreen !important;
+          }
+        </style>
+        
+          <h3> <center> All The Stuff People Has got </center></h3>
+          <br>
+          <h6><center><u>All the items that people have found are listed below. If what you've lost is included in the list, please note down the product ID and click on 'More Details' to access additional information and find out how to contact them </u></center></h6>
+      
       </div>
 
 

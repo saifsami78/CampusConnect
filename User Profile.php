@@ -133,7 +133,7 @@ if(!isset($_SESSION['username'])){
                                 echo '<p>No results found.</p>';
                             } else {
                                 $row = mysqli_fetch_assoc($query_result);
-                                
+                                $_SESSION["clubb"] = $row['club_interest'];
                                 $club_name = "no name";
                                 if($row['club_interest']== 1){
                                   $club_name = "Drama and Cine Club";

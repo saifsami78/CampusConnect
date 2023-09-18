@@ -27,12 +27,21 @@ if(!isset($_SESSION['username'])){
       <br>
      
       <div class="container">
+        <style>
+          h3{
+            color: mediumseagreen;
+          }
+          #tubelight{
+            color: mediumseagreen;
+          }
+        </style>
         <form action = "ActivateLost.php" method = "post">
+
 
             <div class="form-group">
                 <h3>Did you find anything ? Post here !</h3>
 
-                <p>Please write the product name here which you found : </p>
+                <p id="tubelight">Please write the product name here which you found : </p>
                 <input type="text" class="form-control" id="exampleFormControlInput1" name= "product_name" placeholder="Write Product Name only" required>
                 <br>
                 <textarea class="form-control" id="announcement" name="announcement" rows="4" cols="6" placeholder="Write in Details everything!" required></textarea>

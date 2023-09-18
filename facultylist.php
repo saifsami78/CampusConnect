@@ -22,7 +22,7 @@ if(!isset($_SESSION['username'])){
 
       
      
-     
+
      
      <?php include 'navbar.php'; ?>
         <br>
@@ -37,49 +37,52 @@ if(!isset($_SESSION['username'])){
                 
                 <br>
                 <?php
-          $conn = mysqli_connect('localhost', 'root', '', 'connect');
+                  $conn = mysqli_connect('localhost', 'root', '', 'connect');
 
 
-          if ($conn === false) {
-              die('Connection failed: ' . mysqli_connect_error());
-          }
+                  if ($conn === false) {
+                      die('Connection failed: ' . mysqli_connect_error());
+                  }
 
-          $sql = "SELECT * FROM facultyinfo";
-          $query_result = mysqli_query($conn, $sql);
-
-
-          if ($query_result === false) {
-            die('Query failed: ' . mysqli_error($conn));
-          }
-
-          
-          if (mysqli_num_rows($query_result) === 0) {
-              echo '<p>No results found.</p>';
-          } else {
-            $rows = [];
-            while ($row = mysqli_fetch_assoc($query_result)) {
-              $rows[] = $row;
-            }
-
-            $num = count($rows) - 1;
-            for ($i = $num; $i >= 0; $i--) {
+                  $sql = "SELECT * FROM facultyinfo";
+                  $query_result = mysqli_query($conn, $sql);
 
 
-              echo "<br>";
+                  if ($query_result === false) {
+                    die('Query failed: ' . mysqli_error($conn));
+                  }
 
-              echo "<div class='card' style='box-shadow: 2px 2px 10px grey'>
-              <div class='card-body'>
-                <p class='card-text'>". $rows[$i]['fullname'] ."</p>
-                <p class='card-text'>". $rows[$i]['Department'] ."</p>
-                </div>
-              </div>";
-              echo "<hr>";
-              
-            }
-          }
-            
-          mysqli_close($conn);
-        ?>
+                  
+                  if (mysqli_num_rows($query_result) === 0) {
+                      echo '<p>No results found.</p>';
+                  } else {
+                    $rows = [];
+                    while ($row = mysqli_fetch_assoc($query_result)) {
+                      $rows[] = $row;
+                    }
+
+                    $num = count($rows) - 1;
+                    for ($i = $num; $i >= 0; $i--) {
+
+
+                      echo "<br>";
+
+                      echo "<a href='./Faculty%20info.php?facultyid=". $rows[$i]['id'] ."' style='text-decoration:none'>
+                      <div class='card' style='box-shadow: 2px 2px 10px grey'>
+                      <div class='card-body'>
+                      <p class='card-text d-none'>". $rows[$i]['id'] ."</p>
+                        <p class='card-text'>". $rows[$i]['fullname'] ."</p>
+                        <p class='card-text'>". $rows[$i]['Department'] ."</p>
+                        </div>
+                      </div>
+                      </a>";
+                      echo "<hr>";
+                      
+                    }
+                  }
+                    
+                  mysqli_close($conn);
+                ?>
 
         </div>
       

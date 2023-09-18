@@ -10,7 +10,7 @@ if(!isset($_SESSION['username'])){
 
 
 <?php
-  $id = 3;
+  $id = $_GET['facultyid'];
   $conn = mysqli_connect('localhost', 'root', '', 'connect');
 
 
