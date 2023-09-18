@@ -55,16 +55,20 @@ if(!isset($_SESSION['username'])){
                   <br>
                   <br>
                   <div class="profile-details">
-                    <p><strong>Department:</strong> <?php echo $row['Department']; ?></p>
-                    <p><strong>Faculty ID:</strong> <?php echo $row['Faculty_Id']; ?></p>
-                    <p><strong>Email:</strong> <?php echo $row['Email']; ?></p>
-                    <p><strong>Phone:</strong> <?php echo $row['Phone']; ?></p>
+                    <p><strong>Name : </strong></p>
+                    <p><?php echo $row['fullname']; ?></p>
+                    <p><strong>About Me:</strong></p>
+                    <p><?php echo $row['Tellyourself']; ?></p>
                     <p><strong>Office Hours:</strong></p>
                     <p><?php echo $row['Office_Hour']; ?></p>
                     <p><strong>Research Interests:</strong></p>
                     <p><?php echo $row['research']; ?></p>
-                    <p><strong>About Me:</strong></p>
-                    <p><?php echo $row['Tellyourself']; ?></p>
+                    <p><strong>Department:</strong> <?php echo $row['Department']; ?></p>
+                    <p><strong>Faculty ID:</strong> <?php echo $row['Faculty_Id']; ?></p>
+                    <p><strong>Email:</strong> <?php echo $row['Email']; ?></p>
+                    <p><strong>Phone:</strong> <?php echo $row['Phone']; ?></p>
+                    
+                    
                 </div>
           </div>
           <div class="col-6">
