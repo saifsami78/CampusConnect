@@ -6,6 +6,8 @@ if (!isset($_SESSION['username'])) {
     exit; 
 }
 
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
@@ -21,7 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $username = mysqli_real_escape_string($conn, $_SESSION['username']);
-    $sql = "UPDATE signup SET email = '$email', password = '$password', firstname = '$firstname', lastname = '$lastname' where username = '$username'";
+    $sql = "UPDATE signup SET email =
+     '$email', password = '$password', firstname = '$firstname', lastname = '$lastname' where username = '$username'";
 
     if (mysqli_query($conn, $sql)) {
         mysqli_close($conn);
