@@ -35,7 +35,7 @@ if(!isset($_SESSION['username'])){
             color: mediumseagreen;
           }
         </style>
-        <form action = "ActivateLost.php" method = "post">
+        <form action = "ActivateLost.php" method = "post" enctype="multipart/form-data">
 
 
             <div class="form-group">
@@ -48,7 +48,8 @@ if(!isset($_SESSION['username'])){
                 <br>
                 <input type="text" class="form-control" id="exampleFormControlInput1" name="contract_method" placeholder="Method to contract you " required>
                 <br>
-                <input type="file" class="form-control-file" id="photo" name="photo" >
+                <input type="file" class="form-control-file" id="photo" name="photo" accept="image/*">
+
             </div>
             <br>
             <button type="submit" class="btn btn-success">Post it!</button>
