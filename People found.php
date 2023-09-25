@@ -84,15 +84,21 @@ if(!isset($_SESSION['username'])){
 
         if (mysqli_num_rows($result) > 0) {
           while ($row = mysqli_fetch_assoc($result)) {
-              echo '<div class="product">';
-              echo '<h2>' . $row['product_name'] . '</h2>';
-              echo '<p>Post ID: ' . $row['post_id'] . '</p>';
-              echo '</div>';
+            $post_id = $row['post_id'];
+        
+            // Create a link to the page `activatemoredetails.php` with the `post_id` query parameter
+            $link = "activatemoredetails.php?post_id=$post_id";
+        
+            // Wrap the product name in a link
+            echo "<a href='$link'>" . $row['product_name'] . "</a>";
+        
+            // Print the rest of the product information
+            echo '<p>Post ID: ' . $row['post_id'] . '</p>';
+            echo '</div>';
           }
-          } 
-          else {
-              echo '<p class="no-results">No products found.</p>';
-          }
+        } else {
+          echo '<p class="no-results">No products found.</p>';
+        }
       
 
 

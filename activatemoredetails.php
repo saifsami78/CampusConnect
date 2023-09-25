@@ -30,7 +30,8 @@ if (!isset($_SESSION['username'])) {
 
 <?php
 
-$post_id = $_POST['post_id'];
+
+$post_id = $_GET['post_id'];
 
 $conn = mysqli_connect('localhost', 'root', '', 'connect');
 
