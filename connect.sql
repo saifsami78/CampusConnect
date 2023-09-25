@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 25, 2023 at 04:20 AM
+-- Generation Time: Sep 25, 2023 at 11:42 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -46,9 +46,10 @@ CREATE TABLE `facultyinfo` (
 --
 
 INSERT INTO `facultyinfo` (`auto_generated_id`, `Tellyourself`, `photo_link`, `research`, `Office_Hour`, `fullname`, `Department`, `Faculty_Id`, `Email`, `Phone`, `faculty_photo_link`) VALUES
-(1, 'I have extensive experience in teaching and research.', NULL, 'My research interests include data analysis, machine learning, and artificial intelligence.', 'Monday 2:00 PM - 4:00 PM', 'Md. Rahman Khan', 'Computer Science', 1, 'rahmankhan@example.com', '+880123456789', NULL),
-(2, 'I am dedicated to advancing knowledge in my field.', NULL, 'I focus on research related to environmental conservation and biodiversity.', 'Tuesday 10:00 AM - 12:00 PM', 'Tahmina Ahmed', 'Biology', 2, 'tahmina@example.com', '+880987654321', NULL),
-(3, 'I have a passion for educating the next generation.', NULL, 'My research areas include quantum physics and theoretical astrophysics.', 'Wednesday 3:00 PM - 5:00 PM', 'Nusrat Jahan', 'Physics', 3, 'nusrat@example.com', '+880111222333', NULL);
+(1, 'I have extensive experience in teaching and research.', 'uploads/y1.jpg', 'My research interests include data analysis, machine learning, and artificial intelligence.', 'Monday 2:00 PM - 4:00 PM', 'Md. Rahman Khan', 'Computer Science', 1, 'rahmankhan@example.com', '+880123456789', 'uploads/y1.jpg'),
+(2, 'I am dedicated to advancing knowledge in my field.', 'uploads/y2.jpg', 'I focus on research related to environmental conservation and biodiversity.', 'Tuesday 10:00 AM - 12:00 PM', 'Tahmina Ahmed', 'Biology', 2, 'tahmina@example.com', '+880987654321', NULL),
+(3, 'I have a passion for educating the next generation.', NULL, 'My research areas include quantum physics and theoretical astrophysics.', 'Wednesday 3:00 PM - 5:00 PM', 'Nusrat Jahan', 'Physics', 3, 'nusrat@example.com', '+880111222333', NULL),
+(4, 'I am an extrovert', 'uploads/Capture.PNG', 'MAchine learning , Network', 'ST 10:40 - 4:20 PM', 'Nishita Tabassum', 'ECE', 12233248, 'nishita@nortsouth.edu', '0172165998', 'uploads/y2.jpg');
 
 -- --------------------------------------------------------
 
@@ -76,7 +77,9 @@ INSERT INTO `lost_and_found` (`post_id`, `username`, `product_name`, `announceme
 (4, 'user4', 'Found Sunglasses', 'I found a pair of sunglasses at the beach. Contact me to claim them.', 'Phone: +9876543210', NULL),
 (5, 'user5', 'Lost Backpack', 'I left my backpack on the bus. It has important documents. Please help me find it.', 'Email: user5@example.com', NULL),
 (6, 'user1', 'Calculator EX-991X', 'I found this calculator at NSU cafetaria nearly at @ AM today', 'you can call me at 0193487455850', NULL),
-(7, 'user1', 'iphone 11 pro', 'found this phone at SAC 210', 'you can call me at 01934874558344', NULL);
+(7, 'user1', 'iphone 11 pro', 'found this phone at SAC 210', 'you can call me at 01934874558344', 'uploads/i.jpg'),
+(8, 'admin', 'Pendrive', 'I found a 32 GB pendrive at library', 'you can call me at 01934874558344', 'uploads/65112dd961073_Captures33.PNG'),
+(9, 'admin', 'iphone 13 pro', 'found this phone at NAC 310', '018789187528', 'uploads/651155a256fc0_photo-1511707171634-5f897ff02aa9.jpg');
 
 -- --------------------------------------------------------
 
@@ -98,7 +101,11 @@ INSERT INTO `posts` (`post_id`, `post_content`, `username`) VALUES
 (1, 'Hello! Write Now I am In NSU study hall', 'user1'),
 (2, 'Are you there ?\r\n', 'user1'),
 (3, ' tgiug ityigiu', 'user1'),
-(4, 'jfu gjhv', 'user1');
+(4, 'jfu gjhv', 'user1'),
+(5, 'NSU Print zone is quite good as long as you are not using their slow PC! You can bring your own laptop ! Plug in and boom\r\n', 'usr1'),
+(6, 'Today is our javascript php quiz!\r\n', 'admin'),
+(7, 'ajker class cancel\r\n', 'admin'),
+(8, 'exam motamoti hoise ! 10 marks katse ', 'admin');
 
 -- --------------------------------------------------------
 
@@ -137,19 +144,22 @@ CREATE TABLE `signup` (
   `password` varchar(255) DEFAULT NULL,
   `firstname` varchar(255) DEFAULT NULL,
   `lastname` varchar(255) DEFAULT NULL,
-  `club_interest` int(11) DEFAULT NULL
+  `club_interest` int(11) DEFAULT NULL,
+  `type` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `signup`
 --
 
-INSERT INTO `signup` (`id`, `username`, `email`, `password`, `firstname`, `lastname`, `club_interest`) VALUES
-(1, 'user1', 'kaiser@northsouth.edu', 'password1', 'Aniket', 'Prantor', 1),
-(2, 'user2', 'user2@example.com', 'password2', 'Jane', 'Smith', 2),
-(3, 'user3', 'user3@example.com', 'password3', 'Alice', 'Johnson', 1),
-(4, 'user4', 'user4@example.com', 'password4', 'Bob', 'Williams', 3),
-(5, 'user5', 'user5@example.com', 'password5', 'Eva', 'Brown', 2);
+INSERT INTO `signup` (`id`, `username`, `email`, `password`, `firstname`, `lastname`, `club_interest`, `type`) VALUES
+(1, 'iqbal33', 'kaiser@northsouth.edu', 'password1', 'Aniket', 'Prantor', 1, 0),
+(2, 'user2', 'user2@example.com', 'password2', 'Jane', 'Smith', 2, 1),
+(3, 'user3', 'user3@example.com', 'password3', 'Alice', 'Johnson', 1, 1),
+(4, 'user4', 'user4@example.com', 'password4', 'Bob', 'Williams', 3, 0),
+(5, 'user5', 'user5@example.com', 'password5', 'Eva', 'Brown', 2, 1),
+(6, 'admin', 'dj@gmail.com', 'admin', 'Kornia', 'Khurshid', 3, 1),
+(7, 'AniketPrantor', 'wfdkj@gnk.com', 'admin', 'Kazi', 'Faruk', 2, 1);
 
 --
 -- Indexes for dumped tables
@@ -193,19 +203,19 @@ ALTER TABLE `signup`
 -- AUTO_INCREMENT for table `facultyinfo`
 --
 ALTER TABLE `facultyinfo`
-  MODIFY `auto_generated_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `auto_generated_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `lost_and_found`
 --
 ALTER TABLE `lost_and_found`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `report`
@@ -217,7 +227,7 @@ ALTER TABLE `report`
 -- AUTO_INCREMENT for table `signup`
 --
 ALTER TABLE `signup`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
