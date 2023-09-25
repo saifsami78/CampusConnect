@@ -208,13 +208,13 @@ if(!isset($_SESSION['username'])){
                         <div class="container">
                             <br>
                             <br>
-                            <form action="Afacultyinfo.php" method="post">
+                            <form action="Afacultyinfo.php" method="post" enctype="multipart/form-data">
 
 
                                     <div class="mb-3">
                                         <label for="exampleFormControlInput1" class="form-label">Upload your Photo </label>
                                         <br>
-                                        <input type="file" class="form-control-file" id="photo" name="photo">
+                                        <input type="file" class="form-control-file" id="photo" name="photo" accept="image/*">
                                     </div>
 
                                     <div class="input-group">

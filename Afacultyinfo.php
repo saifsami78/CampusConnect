@@ -1,6 +1,5 @@
 <?php
-
-    $photo = $_SESSION['photo'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tellyourself = $_POST['tellyourself'];
     $research = $_POST['rsinterest'];
     $office_hour = $_POST['officehour'];
@@ -10,19 +9,36 @@
     $email = $_POST['email'];
     $phone = $_POST['phone'];
 
+    // Upload photo
+    $targetDir = "uploads/";
+    $targetFile = $targetDir . basename($_FILES["photo"]["name"]);
 
-    $conn = mysqli_connect('localhost', 'root', '', 'connect');
+    if (move_uploaded_file($_FILES["photo"]["tmp_name"], $targetFile)) {
+        // Photo uploaded successfully
+        $photo = $targetFile;
 
-    if ($conn === false) {
-        die('Connection failed: ' . mysqli_connect_error());
+        // Establish a database connection
+        $conn = mysqli_connect('localhost', 'root', '', 'connect');
+
+        if ($conn === false) {
+            die('Connection failed: ' . mysqli_connect_error());
+        }
+
+        // Insert faculty information into the database
+        $sql = "INSERT INTO facultyinfo (Tellyourself, photo_link, research, Office_Hour, fullname, Department, Faculty_Id, Email, Phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("sssssssss", $tellyourself, $photo, $research, $office_hour, $fullname, $Department, $facultyID, $email, $phone);
+
+        if ($stmt->execute()) {
+            echo "Profile updated!";
+        } else {
+            echo "Error: " . $stmt->error;
+        }
+
+        $stmt->close();
+        $conn->close();
+    } else {
+        echo "Photo upload failed.";
     }
-
-    
-    $sql = "INSERT INTO facultyinfo (Tellyourself, photo_link, research, Office_Hour, fullname, Department, Faculty_Id, Email, Phone) VALUES ('$tellyourself', '$photo', '$research', '$office_hour', '$fullname', '$Department', '$facultyID', '$email' , '$phone')";
-    mysqli_query($conn, $sql);
-    mysqli_close($conn);
-    echo "updated!";
-    
-    header('Location: User Profile.php');
-
+}
 ?>

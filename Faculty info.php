@@ -50,7 +50,7 @@ if(!isset($_SESSION['username'])){
 
       <div class="container">
         <div class="row">
-          <div class="col - 6">
+          <div class="col - 7">
                   <br>
                   <br>
                   <br>
@@ -71,14 +71,19 @@ if(!isset($_SESSION['username'])){
                     
                 </div>
           </div>
-          <div class="col-6">
+          <div class="col-5">
               <br>
               <br>
-              <?php
-                  echo '<div style="display: flex; justify-content: center; align-items: center; height: 400px;">';
-                  echo '<img src="faculty.jfif" width="220" height="300">';
-                  echo '</div>';
-              ?>
+              <div class="col-6">
+                  <br>
+                  <br>
+                  <?php
+                  $photoPath = $row['photo_link'];
+                  ?>
+                  <img src='<?php echo $photoPath; ?>' alt='<?php echo $row['fullname']; ?>' width='270' height='400'>
+                  <br>
+              </div>
+
           </div>
         </div>
       </div>
@@ -95,5 +100,7 @@ if(!isset($_SESSION['username'])){
 
   <?php include 'footer.html'; ?>
 </html>
+
+
 
 
