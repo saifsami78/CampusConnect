@@ -31,8 +31,7 @@ if(!isset($_SESSION['username'])){
 
 <?php
 
-    $post_id = '';
-
+    
 
     $post_id = $_POST['post_id'];
     
@@ -46,7 +45,7 @@ if(!isset($_SESSION['username'])){
     }
 
     
-    $sql = "SELECT product_name, announcement, contract_method FROM lost_and_found WHERE post_id = $post_id";
+    $sql = "SELECT product_name, announcement, contact_method FROM lost_and_found WHERE post_id = $post_id";
     $result = mysqli_query($conn, $sql);
 
    
@@ -73,10 +72,14 @@ if(!isset($_SESSION['username'])){
         echo '<img src="abc.jfif" width="200" height="400">';
         echo '</div>';
         
+
+        echo'<br>';
+        echo'<br>';
         
 
         echo '<p><center>Product Details: ' . $row['announcement'] . '</center></p>';
-        echo '<p><center>Contract Method: ' . $row['contract_method'] . '</center></p>';
+        echo '<p><center>Contract Method: ' . $row['contact_method'] . '</center></p>';
+        echo'<br>';
     }
 
 

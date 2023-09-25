@@ -67,10 +67,10 @@ if(!isset($_SESSION['username'])){
 
                       echo "<br>";
 
-                      echo "<a href='./Faculty%20info.php?facultyid=". $rows[$i]['id'] ."' style='text-decoration:none'>
+                      echo "<a href='./Faculty%20info.php?facultyid=". $rows[$i]['auto_generated_id'] ."' style='text-decoration:none'>
                       <div class='card' style='box-shadow: 2px 2px 10px grey'>
                       <div class='card-body'>
-                      <p class='card-text d-none'>". $rows[$i]['id'] ."</p>
+                      <p class='card-text d-none'>". $rows[$i]['auto_generated_id'] ."</p>
                         <p class='card-text'>". $rows[$i]['fullname'] ."</p>
                         <p class='card-text'>". $rows[$i]['Department'] ."</p>
                         </div>

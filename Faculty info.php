@@ -18,7 +18,7 @@ if(!isset($_SESSION['username'])){
       die('Connection failed: ' . mysqli_connect_error());
   }
 
-  $sql = "SELECT * FROM facultyinfo where id = '$id' ";
+  $sql = "SELECT * FROM facultyinfo where auto_generated_id = '$id' ";
   $query_result = mysqli_query($conn, $sql);
 
 
