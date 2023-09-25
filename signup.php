@@ -14,14 +14,15 @@
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $type = $_POST['type'];
     $club_interest = $_POST['club_interest'];
 
     if($connection -> connect_error){
         die('Connection Failed: '.$connection->connect_error);
     }
     else{
-        $statement = $connection -> prepare("insert into signup (username, email, password, firstname, lastname, club_interest) value (?,?,?,?,?,?)");
-        $statement -> bind_param('sssssi', $username, $email, $password, $firstname, $lastname, $club_interest);
+        $statement = $connection -> prepare("insert into signup (username, email, password, firstname, lastname, club_interest, type) value (?,?,?,?,?,?,?)");
+        $statement -> bind_param('sssssii', $username, $email, $password, $firstname, $lastname, $club_interest, $type);
         $statement -> execute();
         echo "Registration Completed";
         $statement -> close();

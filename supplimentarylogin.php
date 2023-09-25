@@ -17,7 +17,14 @@
         if ($result->num_rows == 1) {
             echo "Login successful!";
             $_SESSION["username"] = $username;
-            header("Location: User Profile.php");
+            $row = $result->fetch_assoc();
+            if($row['type'] == 1){
+                header("Location: User Profile.php");
+            }
+            else{
+                header("Location: User Profile2.php");
+            }
+           
         } else {
             echo "Login failed.";
         }

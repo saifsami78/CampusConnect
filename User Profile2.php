@@ -33,7 +33,7 @@ if(!isset($_SESSION['username'])){
                 <ul class="nav nav-tabs justify-content-center">
                     <li class="nav-item"><a data-bs-toggle="tab" class="nav-link active" href="#Post_here"> Post </a></li>
                     <li class="nav-item"><a data-bs-toggle="tab" class="nav-link" href="#AboutMe">About Me </a></li>
-                    <li class="nav-item"><a data-bs-toggle="tab" class="nav-link" href="#FacultyProfileMaking">Faculty Profile</a></li>
+                   
                 </ul>
 
                 <div class="tab-content">
@@ -206,6 +206,8 @@ if(!isset($_SESSION['username'])){
                         <br>
 
                         <div class="container">
+
+                            
                             <br>
                             <br>
                             <form action="Afacultyinfo.php" method="post">

@@ -50,6 +50,20 @@
                 
                         <br>
 
+                        <p>Are you a student or faculty member ? </p>
+
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="type" value="0" id="maleRadio">
+                            <label class="form-check-label" for="maleRadio">Student</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="type" value="1" id="femaleRadio">
+                            <label class="form-check-label" for="femaleRadio">Faculty Member</label>
+                        </div>
+
+                        <br>
+
+
                         <p>In which club you have interesy ? (If none choose I am not interested to any club)</p>
                         <select class="form-select" name="club_interest" Default aria-label="Default select example">
                             <option selected> </option>
