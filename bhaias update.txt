@@ -1,8 +1,6 @@
 cookie use
 push notification 
-search 
-ajax 
 javascript live search
 more on news feed 
-photo add
+photo add (done)
 api map 
