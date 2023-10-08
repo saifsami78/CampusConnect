@@ -42,9 +42,16 @@ if(!isset($_SESSION['username'])){
         <br>
         
         <p>Md. Saif Uddin Sarker</p>
-        <p>Ahmed Fahim</p>
         <p>Mansib Nawaz</p>
-        <p>Tomal</p>
+      </div>
+
+      <div class="container">
+        <br>
+        <br>
+        <h3>Having Problem finding the location ? </h3>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.0979540596095!2d90.42298167513317!3d23.81511558628923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c64c103a8093%3A0xd660a4f50365294a!2sNorth%20South%20University!5e0!3m2!1sen!2sbd!4v1696787861524!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
       </div>
 
       <br>
