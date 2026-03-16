@@ -42,7 +42,7 @@ if(!isset($_SESSION['username'])){
         <br>
         
         <p>Md. Saif Uddin Sarker</p>
-        <p>Mansib Nawaz</p>
+       
       </div>
 
       <div class="container">

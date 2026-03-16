@@ -1,13 +1,22 @@
 # CampusConnect
 
-A full-stack campus social networking platform built with PHP and MySQL, designed to connect students, faculty, and campus communities in one unified portal.
+A full-stack campus social networking platform built with PHP and MySQL, designed to connect students, faculty, and campus communities in one web portal aka Facbook for Campus
 
 ---
 
 ## Overview
 
-CampusConnect is a web-based platform developed as part of **CSE482** course project. Here Student and teacher can post something which will be shown on everyones news feed, Teacher
+CampusConnect is a web-based platform developed as part of CSE482 course project. Here Student and teacher can post something which will be shown on everyones news feed, 
+Teacher can update its contract info , office hour which is viewable by student. There is also module for lost and found .Student can see all the clubs in the varsity.
+
 ---
+
+
+## Overview
+
+CampusConnect is a web-based platform developed as part of the **CSE482 course project**. Here, students and teachers can post updates which are shown on everyone's news feed.  
+Teachers can update their contact info and office hours, viewable by students.  
+There is also a **Lost & Found** module, and students can see all campus clubs.
 
 ## Features
 
@@ -24,20 +33,19 @@ CampusConnect is a web-based platform developed as part of **CSE482** course pro
 ---
 
 
-
----
-
 ## Screenshots
 
 **News Feed**
-![News Feed](Screenshots/post.png)
+![News Feed](screenshot/post.png)
 
 **Lost and Found**
-![Lost and Found](Screenshots/lostandfound.png)
+![Lost and Found](screenshot/lostandfound.png)
 
 **User Profile**
-![User Profile](Screenshots/userprofile.png)
+![User Profile](screenshot/userprofile.png)
 
+
+------------------
 
 ## Project Structure
 
@@ -61,19 +69,21 @@ CampusConnect/
 ├── Club Info.php              # Club listing page
 ├── art & photography.php      # Art & Photography club page
 ├── athletics.html             # Athletics club page
-├── cine and drama.html        # Cine & Drama club page
+├── cine and drama.html        # Cine & Drama club page added on club info
 ├── communication.html         # Communication club page
 ├── lost and found.php         # Lost & Found board
 ├── ActivateLost.php           # Mark item as found
 ├── activatemoredetails.php    # Lost item detail view
 ├── More details.php           # Extended item details
-├── Report.php                 # Content/user reporting
-├── About Us.php               # About the platform
-├── supplimentarylogin.php     # Supplementary login handler
+├── Report.php                 # Content/user reporting about any post
+├── About Us.php               # About the platform/builder
+├── supplimentarylogin.php     # login handler
 ├── connect.sql                # Database schema
 ├── footer.html / footer2.html # Shared footer components
-├── 3.css                      # Global stylesheet
+├── 3.css                      
 └── uploads/                   # User media
+└── screenshot/                #Screenshot of the project used in readme
+
 ```
 
 ---
@@ -90,16 +100,13 @@ CampusConnect/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/saifsami78/CampusConnect.git
+   gh repo clone saifsami78/CampusConnect
    ```
 
 2. **Move to your server's web root**
    ```bash
    # For XAMPP on Windows
-   mv CampusConnect/ C:/xampp/htdocs/
-
-   # For LAMP on Linux
-   mv CampusConnect/ /var/www/html/
+   paste the whole folder on htdocs 
    ```
 
 3. **Import the database**
@@ -108,7 +115,6 @@ CampusConnect/
    - Import `connect.sql` from the project root
 
 4. **Configure the database connection**
-   - Locate the database credentials in the relevant PHP files and update them to match your local setup:
      ```php
      $host = "localhost";
      $user = "root";
