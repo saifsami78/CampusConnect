@@ -12,12 +12,6 @@ Teacher can update its contract info , office hour which is viewable by student.
 ---
 
 
-## Overview
-
-CampusConnect is a web-based platform developed as part of the **CSE482 course project**. Here, students and teachers can post updates which are shown on everyone's news feed.  
-Teachers can update their contact info and office hours, viewable by students.  
-There is also a **Lost & Found** module, and students can see all campus clubs.
-
 ## Features
 
 - **User Authentication** — Secure sign-up and login system with session management and logout handling
