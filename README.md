@@ -2,14 +2,14 @@
 
 A full-stack campus social networking platform built with PHP and MySQL, designed to connect students, faculty, and campus communities in one web portal aka Facbook for Campus
 
----
+
 
 ## Overview
 
 CampusConnect is a web-based platform developed as part of CSE482 course project. Here Student and teacher can post something which will be shown on everyones news feed, 
 Teacher can update its contract info , office hour which is viewable by student. There is also module for lost and found .Student can see all the clubs in the varsity.
 
----
+
 
 
 ## Features
@@ -24,7 +24,7 @@ Teacher can update its contract info , office hour which is viewable by student.
 - **Reporting System** — Report inappropriate content or users
 - **About Us Page** — Institutional information page for the platform
 
----
+
 
 
 ## Screenshots
@@ -82,7 +82,7 @@ CampusConnect/
 
 ---
 
-## Getting Started
+## To Install
 
 ### Prerequisites
 
