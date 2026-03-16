@@ -108,15 +108,8 @@ CampusConnect/
    - Create a new database named `campusconnect`
    - Import `connect.sql` from the project root
 
-4. **Configure the database connection**
-     ```php
-     $host = "localhost";
-     $user = "root";
-     $password = "";
-     $database = "campusconnect";
-     ```
 
-5. **Run the application**
+4. **Run the application**
    - Start Apache and MySQL via XAMPP/LAMP
    - Visit `http://localhost/CampusConnect/index.php` in your browser
 
